@@ -1,15 +1,39 @@
-// Write your Color component here
+import { useState } from "react";
+import "./App.css";
+import dogs from "./dogs";
 
-const App = () => {
+function App() {
+  const [heavydog setheavydog = useState(null);
+  console.log("heavydog", heavydog);
+
   return (
-    <div id="container">
-      <div id="navbar">
-        <div>Currently selected: </div>
-        <div className="red">red</div>
-      </div>
-      <div id="colors-list">{/* colors go here */}</div>
-    </div>
+    <>
+      {heavydog ? <h1>The best dog is {heavydog}</h1> : null}
+
+      <Dogs
+        name="Grandy"
+        breed="Alaskan"
+        color="Grey"
+        setheavydog={setheavydog}
+      />
+
+      <Dogs
+        name="Dusty"
+        breed="Labrador"
+        color="brown"
+        setheavydog={setheavydog}
+      />
+
+      <Dogs
+        name="Sleepy"
+        breed="french"
+        color="lightbrown"
+        setheavydog={setheavydog}
+  
+
+      />
+    </>
   );
-};
+}
 
 export default App;
